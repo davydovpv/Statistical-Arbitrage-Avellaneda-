@@ -28,7 +28,7 @@ def find_Factor(ret, delay, fac_num):
     weight.columns = std.index
     weight = weight/std
     factor_ret = pd.DataFrame(np.dot(ret, weight.transpose()),index = ret.index)
-    return factor_ret
+    return factor_ret, weight
 
 
 def find_Residue(ret,ret_factorret):
